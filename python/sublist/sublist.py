@@ -26,7 +26,6 @@ def sublist(list_one, list_two):
     # Adress concern that input may contain delimter
     # https://exercism.org/tracks/python/exercises/sublist/approaches/using-strings
     delimiter = get_delimiter(str(list_one)+str(list_two))
-    delimiter = ' '
     
     string_one = delimiter.join(map(str,list_one))+delimiter
     string_two = delimiter.join(map(str,list_two))+delimiter
