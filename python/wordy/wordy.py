@@ -21,7 +21,7 @@ def resolve(tokens):
     return [result] + tokens[3:]
 
 def answer(question: str) -> str:
-    tokens = question.lstrip('What is').rstrip('?').split()
+    tokens = question.removeprefix('What is').removesuffix('?').split()
     tokens = [token for token in tokens if token not in ignored]
     if any(token for token in tokens if not is_valid(token)):
         raise ValueError(f"unknown operation")
